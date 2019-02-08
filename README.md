@@ -8,3 +8,23 @@
 
 #### Controller
 - HabitController
+
+#### DB設計
+##### Users
+- id
+- password
+- email
+- name
+
+##### Habits
+- id
+- name
+- body
+- on/off
+- user_id
+
+##### 習慣達成率
+- id
+- habit_id
+- OK/NG flag
+- date
