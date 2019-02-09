@@ -20,11 +20,11 @@
 - id
 - name
 - body
-- on/off
+- is_turned
 - user_id
 
 ##### 習慣達成率
 - id
 - habit_id
-- OK/NG flag
+- is_achievement
 - date
