@@ -23,7 +23,7 @@
 - is_turned
 - user_id
 
-##### 習慣達成率
+##### achievementrate
 - id
 - habit_id
 - is_achievement
