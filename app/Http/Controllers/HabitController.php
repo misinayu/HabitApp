@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class HabitController extends Controller
 {
     public function index() {
-        return view('habits.index');
+        $title = 'Welecom To HabitApp';
+        return view('habits.index')->with('title', $title);
     }
 }
