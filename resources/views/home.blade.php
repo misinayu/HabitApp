@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <a href="/habits/create" class="btn btn-primary">Create Habit</a>
+                    <h3>Your Habits</h3>
                 </div>
             </div>
         </div>
