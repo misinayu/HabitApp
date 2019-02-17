@@ -15,7 +15,7 @@
 //    return view('welcome');
 //});
 
-Route::get('/', 'HabitController@index');
+Route::get('/', 'HabitsController@index');
 
 Auth::routes();
 

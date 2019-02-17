@@ -45,3 +45,8 @@
     - カレンダー表示、実行した日付をチェック
 - [ ] ロジック作成
 - [ ] テスト
+
+
+#### artisan command
+- php artisan make:controller [controller name] --resource
+  - make function
