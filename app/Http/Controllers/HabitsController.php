@@ -24,7 +24,7 @@ class HabitsController extends Controller
      */
     public function create()
     {
-        //
+        return view('habits.create');
     }
 
     /**

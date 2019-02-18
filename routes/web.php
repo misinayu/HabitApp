@@ -16,6 +16,7 @@
 //});
 
 Route::get('/', 'HabitsController@index');
+Route::get('/create', 'HabitsController@create');
 
 Auth::routes();
 
