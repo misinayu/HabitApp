@@ -18,6 +18,8 @@
 Route::get('/', 'HabitsController@index');
 Route::get('/create', 'HabitsController@create');
 
+Route::resource('habits', 'HabitsController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

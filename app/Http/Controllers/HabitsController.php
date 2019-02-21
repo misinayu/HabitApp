@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Habit;
+use DB;
 
 class HabitsController extends Controller
 {
@@ -35,7 +37,19 @@ class HabitsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'body' => 'required',
+            'is_turned' => 'required',
+        ]);
+
+        // Create Habit
+        $habit = new Habit;
+        $habit->name = $request->input('name');
+        $habit->body = $request->input('body');
+        $habit->save();
+
+        return redirect('/')->with('success', 'Habit Created');
     }
 
     /**

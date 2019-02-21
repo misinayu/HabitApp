@@ -4,7 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <p>Create Habit</p>
+            <h1>Create Habit</h1>
+            {!! Form::open(['action' => 'HabitsController@store', 'method' => 'POST']) !!}
+            <div class="form-group">
+            </div>
+            {!! Form::close() !!}
         </div>
     </div>
 </div>
