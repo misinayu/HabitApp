@@ -7,7 +7,14 @@
             <h1>Create Habit</h1>
             {!! Form::open(['action' => 'HabitsController@store', 'method' => 'POST']) !!}
             <div class="form-group">
+                {{Form::label('name', 'Name')}}
+                {{Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Habit Name'])}}
             </div>
+            <div class="form-group">
+                {{Form::label('body', 'Body')}}
+                {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Body Text'])}}
+            </div>
+            {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
             {!! Form::close() !!}
         </div>
     </div>
