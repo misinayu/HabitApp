@@ -47,6 +47,7 @@ class HabitsController extends Controller
         $habit = new Habit;
         $habit->name = $request->input('name');
         $habit->body = $request->input('body');
+        $habit->is_turned = $request->input('is_turned');
         $habit->save();
 
         return redirect('/')->with('success', 'Habit Created');
@@ -71,7 +72,8 @@ class HabitsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $habit = Habit::find($id);
+        return view('habits.edit')->with('habit', $habit);
     }
 
     /**
@@ -83,7 +85,20 @@ class HabitsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'body' => 'required',
+            'is_turned' => 'required'
+        ]);
+
+        // Create Habit
+        $habit = Habit::find($id);
+        $habit->name = $request->input('name');
+        $habit->body = $request->input('body');
+        $habit->is_turner = $request->input('is_turned');
+        $habit->save();
+
+        return redirect('/habits')->with('success', 'Habit Updated');
     }
 
     /**
