@@ -48,6 +48,7 @@ class HabitsController extends Controller
         $habit->name = $request->input('name');
         $habit->body = $request->input('body');
         $habit->is_turned = $request->input('is_turned');
+        $habit->user_id = auth()->user()->id;
         $habit->save();
 
         return redirect('/')->with('success', 'Habit Created');
