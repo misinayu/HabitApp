@@ -16,7 +16,7 @@
 //});
 
 Route::get('/', 'HabitsController@index');
-Route::get('/create', 'HabitsController@create');
+//Route::get('/create', 'HabitsController@create');
 
 Route::resource('habits', 'HabitsController');
 

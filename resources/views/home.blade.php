@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <a href="/create" class="btn btn-primary">Create Habit</a>
+                    <a href="/habits/create" class="btn btn-primary">Create Habit</a>
                     <h3>Your Habits</h3>
                 </div>
             </div>

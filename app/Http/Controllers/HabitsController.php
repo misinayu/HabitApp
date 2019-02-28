@@ -62,7 +62,8 @@ class HabitsController extends Controller
      */
     public function show($id)
     {
-        //
+        $title = "This is show page";
+        return view('habits.show')->with('title', $title);
     }
 
     /**
