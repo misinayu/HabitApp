@@ -50,3 +50,4 @@
 #### artisan command
 - php artisan make:controller [controller name] --resource
   - make function
+- 
